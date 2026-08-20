@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pamplona National High School</title>
+  <style>
+    /* Global Styles & Formal Typography */
+    :root {
+      --primary: #0a192f;
+      --secondary: #1e3a8a;
+      --accent: #d97706;
+      --light-bg: #f8fafc;
+      --white: #ffffff;
+      --text-dark: #1e293b;
+      --text-muted: #64748b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      color: var(--text-dark);
+      background-color: var(--light-bg);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Times New Roman', Times, serif;
+      letter-spacing: 0.5px;
+    }
+
+    /* Header & Navigation */
+    header {
+      background-color: var(--primary);
+      color: var(--white);
+      padding: 1.5rem 2rem;
+      border-bottom: 4px solid var(--accent);
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .seal-area {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: var(--white);
+      border: 2px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: var(--primary);
+      font-size: 0.8rem;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .school-title h1 {
+      font-size: 1.8rem;
+      text-transform: uppercase;
+    }
+
+    .school-title p {
+      font-size: 0.95rem;
+      color: #94a3b8;
+      font-style: italic;
+    }
+
+    nav {
+      background-color: var(--secondary);
+    }
+
+    nav ul {
+      max-width: 1200px;
+      margin: 0 auto;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      padding: 1rem 1.25rem;
+      display: block;
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    nav a:hover {
+      background-color: var(--primary);
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .section-title {
+      color: var(--primary);
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+    }
+
+    /* Grid Layouts */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid #e2e8f0;
+      border-radius: 4px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    /* Announcements */
+    .announcement-item {
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .announcement-item:last-child {
+      border-bottom: none;
+    }
+
+    .date {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-family: Arial, sans-serif;
+    }
+
+    /* Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery-placeholder {
+      background-color: #cbd5e1;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-family: Arial, sans-serif;
+      border-radius: 4px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--primary);
+      color: var(--white);
+      padding: 3rem 1rem 1.5rem;
+      margin-top: 4rem;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #334155;
+    }
+
+    .copyright {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #94a3b8;
+      margin-top: 1.5rem;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with School Seal -->
+  <header>
+    <div class="header-container">
+      <div class="seal-area">
+        [SCHOOL SEAL]
+      </div>
+      <div class="school-title">
+        <h1>Pamplona National High School</h1>
+        <p>Excellence, Integrity, and Service</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#announcements">Announcements</a></li>
+      <li><a href="#programs">Programs</a></li>
+      <li><a href="#faculty">Faculty</a></li>
+      <li><a href="#gallery">News & Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+
+    <!-- Announcements & Feature Section -->
+    <div class="grid-2">
+      <main class="card">
+        <h2 class="section-title">Welcome to Our School</h2>
+        <p>Providing quality education and fostering character development for every learner.</p>
+      </main>
+
+      <aside class="card" id="announcements">
+        <h2 class="section-title">Announcements</h2>
+        <div class="announcement-item">
+          <span class="date">August 25, 2026</span>
+          <h4>Enrollment Schedule</h4>
+          <p>Official enrollment period for the upcoming academic term opens next week.</p>
+        </div>
+        <div class="announcement-item">
+          <span class="date">August 20, 2026</span>
+          <h4>Parents & Teachers Conference</h4>
+          <p>Join us this Friday at the main auditorium for our quarterly briefing.</p>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Academic Programs -->
+    <section id="programs">
+      <h2 class="section-title">Academic Programs</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Junior High School</h3>
+          <p>Comprehensive core curriculum following national standards for grades 7 through 10.</p>
+        </div>
+        <div class="card">
+          <h3>Senior High Academic Track</h3>
+          <p>Specialized strands preparing students for higher education degrees.</p>
+        </div>
+        <div class="card">
+          <h3>TVL Track</h3>
+          <p>Technical-Vocational-Livelihood courses designed for practical skills and certification.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Faculty -->
+    <section id="faculty">
+      <h2 class="section-title">Faculty & Staff</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>School Administration</h3>
+          <p>Office of the Principal & Academic Coordinators</p>
+        </div>
+        <div class="card">
+          <h3>Department Heads</h3>
+          <p>Leading subject area developments across science, mathematics, and languages.</p>
+        </div>
+        <div class="card">
+          <h3>Teaching Staff</h3>
+          <p>Dedicated educators committed to academic growth and student mentoring.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- News & Gallery -->
+    <section id="gallery">
+      <h2 class="section-title">News & Gallery</h2>
+      <div class="gallery-grid">
+        <div class="gallery-placeholder">Campus Event 1</div>
+        <div class="gallery-placeholder">Campus Event 2</div>
+        <div class="gallery-placeholder">Campus Event 3</div>
+        <div class="gallery-placeholder">Campus Event 4</div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Contact Information Footer -->
+  <footer id="contact">
+    <div class="footer-container">
+      <div>
+        <h3>Pamplona National High School</h3>
+        <p>Official School Portal</p>
+      </div>
+      <div>
+        <h4>Contact Information</h4>
+        <p>Email: info@pamplonanhs.edu.ph</p>
+        <p>Phone: (054) 000-0000</p>
+      </div>
+      <div>
+        <h4>Location</h4>
+        <p>Pamplona, Camarines Sur</p>
+        <p>Philippines</p>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2026 Pamplona National High School. All Rights Reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
