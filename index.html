@@ -5,15 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pamplona National High School</title>
   <style>
-    /* Global Styles & Formal Typography */
     :root {
       --primary: #0a192f;
       --secondary: #1e3a8a;
-      --accent: #d97706;
-      --light-bg: #f8fafc;
+      --accent: #f59e0b;
+      --light: #f8fafc;
       --white: #ffffff;
-      --text-dark: #1e293b;
-      --text-muted: #64748b;
+      --text: #334155;
     }
 
     * {
@@ -23,22 +21,16 @@
     }
 
     body {
-      font-family: 'Georgia', 'Times New Roman', serif;
-      color: var(--text-dark);
-      background-color: var(--light-bg);
+      font-family: Arial, sans-serif;
       line-height: 1.6;
+      color: var(--text);
+      background-color: #f1f5f9;
     }
 
-    h1, h2, h3, h4 {
-      font-family: 'Times New Roman', Times, serif;
-      letter-spacing: 0.5px;
-    }
-
-    /* Header & Navigation */
     header {
       background-color: var(--primary);
       color: var(--white);
-      padding: 1.5rem 2rem;
+      padding: 1.5rem 1rem;
       border-bottom: 4px solid var(--accent);
     }
 
@@ -54,16 +46,17 @@
       width: 80px;
       height: 80px;
       border-radius: 50%;
-      background-color: var(--white);
+      background-color: transparent;
       border: 2px solid var(--accent);
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: bold;
-      color: var(--primary);
+      color: var(--white);
       font-size: 0.8rem;
       text-align: center;
       flex-shrink: 0;
+      overflow: hidden;
     }
 
     .school-title h1 {
@@ -104,7 +97,6 @@
       background-color: var(--primary);
     }
 
-    /* Main Container */
     .container {
       max-width: 1200px;
       margin: 2rem auto;
@@ -120,7 +112,6 @@
       font-size: 1.4rem;
     }
 
-    /* Grid Layouts */
     .grid-2 {
       display: grid;
       grid-template-columns: 2fr 1fr;
@@ -140,10 +131,9 @@
       border: 1px solid #e2e8f0;
       border-radius: 4px;
       padding: 1.5rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     }
 
-    /* Announcements */
     .announcement-item {
       padding-bottom: 1rem;
       margin-bottom: 1rem;
@@ -156,34 +146,31 @@
 
     .date {
       font-size: 0.8rem;
-      color: var(--text-muted);
-      font-family: Arial, sans-serif;
+      color: #64748b;
+      font-weight: bold;
     }
 
-    /* Gallery */
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 1rem;
     }
 
-    .gallery-placeholder {
+    .gallery-item {
       background-color: #cbd5e1;
       height: 150px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--text-muted);
-      font-family: Arial, sans-serif;
-      border-radius: 4px;
+      color: #475569;
+      font-weight: bold;
     }
 
-    /* Footer */
     footer {
       background-color: var(--primary);
       color: var(--white);
-      padding: 3rem 1rem 1.5rem;
-      margin-top: 4rem;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
     }
 
     .footer-container {
@@ -192,27 +179,25 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
-      padding-bottom: 2rem;
-      border-bottom: 1px solid #334155;
     }
 
     .copyright {
       text-align: center;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #334155;
       font-size: 0.85rem;
       color: #94a3b8;
-      margin-top: 1.5rem;
-      font-family: Arial, sans-serif;
     }
   </style>
 </head>
 <body>
 
-  <!-- Header with School Seal -->
   <header>
     <div class="header-container">
       <div class="seal-area">
-  <img src="216725667_342901164107051_5336572490594676589_n-removebg-preview.png" alt="Pamplona National High School Seal" style="width: 100%; height: 100%; object-fit: contain;">
-</div>
+        <img src="216725667_342901164107051_5336572490594676589_n-removebg-preview.png" alt="Pamplona National High School Seal" style="width: 100%; height: 100%; object-fit: contain;">
+      </div>
       <div class="school-title">
         <h1>Pamplona National High School</h1>
         <p>Excellence, Integrity, and Service</p>
@@ -220,7 +205,6 @@
     </div>
   </header>
 
-  <!-- Navigation -->
   <nav>
     <ul>
       <li><a href="#announcements">Announcements</a></li>
@@ -231,31 +215,32 @@
     </ul>
   </nav>
 
-  <div class="container">
-
-    <!-- Announcements & Feature Section -->
-    <div class="grid-2">
-      <main class="card">
+  <main class="container">
+    <section class="grid-2">
+      <div>
         <h2 class="section-title">Welcome to Our School</h2>
-        <p>Providing quality education and fostering character development for every learner.</p>
-      </main>
+        <div class="card">
+          <p>Providing quality education and fostering character development for every learner.</p>
+        </div>
+      </div>
 
-      <aside class="card" id="announcements">
+      <div id="announcements">
         <h2 class="section-title">Announcements</h2>
-        <div class="announcement-item">
-          <span class="date">August 25, 2026</span>
-          <h4>Enrollment Schedule</h4>
-          <p>Official enrollment period for the upcoming academic term opens next week.</p>
+        <div class="card">
+          <div class="announcement-item">
+            <span class="date">August 25, 2026</span>
+            <h3>Enrollment Schedule</h3>
+            <p>Official enrollment period for the upcoming academic term opens next week.</p>
+          </div>
+          <div class="announcement-item">
+            <span class="date">August 20, 2026</span>
+            <h3>Parents & Teachers Conference</h3>
+            <p>Join us this Friday at the main auditorium for our quarterly briefing.</p>
+          </div>
         </div>
-        <div class="announcement-item">
-          <span class="date">August 20, 2026</span>
-          <h4>Parents & Teachers Conference</h4>
-          <p>Join us this Friday at the main auditorium for our quarterly briefing.</p>
-        </div>
-      </aside>
-    </div>
+      </div>
+    </section>
 
-    <!-- Academic Programs -->
     <section id="programs">
       <h2 class="section-title">Academic Programs</h2>
       <div class="grid-3">
@@ -274,7 +259,6 @@
       </div>
     </section>
 
-    <!-- Faculty -->
     <section id="faculty">
       <h2 class="section-title">Faculty & Staff</h2>
       <div class="grid-3">
@@ -293,20 +277,17 @@
       </div>
     </section>
 
-    <!-- News & Gallery -->
     <section id="gallery">
       <h2 class="section-title">News & Gallery</h2>
       <div class="gallery-grid">
-        <div class="gallery-placeholder">Campus Event 1</div>
-        <div class="gallery-placeholder">Campus Event 2</div>
-        <div class="gallery-placeholder">Campus Event 3</div>
-        <div class="gallery-placeholder">Campus Event 4</div>
+        <div class="gallery-item">Campus Event 1</div>
+        <div class="gallery-item">Campus Event 2</div>
+        <div class="gallery-item">Campus Event 3</div>
+        <div class="gallery-item">Campus Event 4</div>
       </div>
     </section>
+  </main>
 
-  </div>
-
-  <!-- Contact Information Footer -->
   <footer id="contact">
     <div class="footer-container">
       <div>
@@ -314,12 +295,12 @@
         <p>Official School Portal</p>
       </div>
       <div>
-        <h4>Contact Information</h4>
+        <h3>Contact Information</h3>
         <p>Email: info@pamplonanhs.edu.ph</p>
         <p>Phone: (054) 000-0000</p>
       </div>
       <div>
-        <h4>Location</h4>
+        <h3>Location</h3>
         <p>Pamplona, Camarines Sur</p>
         <p>Philippines</p>
       </div>
